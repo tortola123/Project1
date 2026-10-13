@@ -9,11 +9,25 @@
   <script src="script.js"></script>
 </head>
 
-<body> 
+<body>
   <header>
-    <h1>Planets</h1>
-  </header>
-  <section id="planets"></section>
-  <footer>Icons via <a href="https://stock.adobe.com/ca/">Adobe</a></footer>
+  <h1>Card Binder</h1>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-search" aria-selected="true">Search</button>
+    <button class="tab" role="tab" id="t-coll" aria-selected="false">My collection <span id="count"></span></button>
+  </div>
+  <form id="form">
+    <input type="search" id="q" placeholder="Card name or Scryfall syntax" aria-label="Search cards" autocomplete="off">
+    <button class="go" type="submit">Search</button>
+  </form>
+  <p class="hint" id="hint">Try <code>lightning bolt</code>, <code>t:dragon c:red</code>, or <code>o:"draw a card" cmc&lt;=2</code>.</p>
+</header>
+<main>
+  <div class="status" id="status" aria-live="polite"></div>
+  <div class="bar" id="bar" hidden></div>
+  <div class="grid" id="grid"></div>
+  <button class="more" id="more" hidden>Load more</button>
+</main>
+<dialog id="dlg"><img id="big" alt=""></dialog> 
 </body>
 </html>
