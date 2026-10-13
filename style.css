@@ -1,0 +1,2 @@
+.card{display:flex;flex-direction:column;gap:8px}
+.card img{width:100%;aspect-ratio:488/680;object-fit:cover;border-radius:4.5% / 3.3%;background:var(--felt2);display:block;cursor:zoom-in}
